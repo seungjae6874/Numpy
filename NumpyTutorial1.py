@@ -359,6 +359,76 @@ np.vstack([v1,v2])
 # Load Data from file
 
 
+# In[152]:
+
+
+filedata = np.genfromtxt('data.txt',delimiter=',')
+filedata = filedata.astype('int')
+filedata
+
+
+# In[153]:
+
+
+########### Boolean Masking and Advanced Indexing
+
+
+# In[155]:
+
+
+filedata[filedata > 23]
+
+
+# In[157]:
+
+
+filedata > 10
+
+
+# In[158]:
+
+
+# You can index with a list in Numpy
+a = np.array([1,2,3,4,5,6,7,8,9])
+a[[1,2,8]] #1,2,8번째 인덱스 값을 출해서 list로 보여준다.
+
+
+# In[159]:
+
+
+np.any(filedata > 50, axis = 0)
+
+
+# In[161]:
+
+
+((filedata > 30) & (filedata < 100))
+
+
+# In[203]:
+
+
+
+a = np.ones((6,5),int)
+c = 0
+flag = 0
+for x in range(6):
+    if flag == 1:
+        c+=1
+    for y in range(5):
+        a[x,y] += c
+        c += 1
+    
+    
+print(a[2:4,:2])
+i = 1
+for x in range(4):
+    print(a[x,i])
+    i+=1
+print(a[[0,1,2,3],[1,2,3,4]]) ###0행의 1열, 1행의 2열 2행의 3열,3행의 4열을 뽑아라는 뜻
+print(a[[0,4,5],3:]) #0행의 3열부터 끝까지, 4,5행의 3열부터 끝까지를 뽑아라
+
+
 # In[ ]:
 
 
