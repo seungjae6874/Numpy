@@ -1,0 +1,33 @@
+Numpy Tutorial
+
+1. Background Info
+
+- How are Lists different from Numpy
+ 1.Lists = Slow
+ 2.Numpy = Fast
+   = Fixed Type
+  * faster to read less bytes of memory
+  * no type check whatever object it is
+
+  Why numpy fast?
+  - > contiguous Memory
+  장점 : simd ( single instructure mortable data)
+         vector processing
+	effective cache utilization
+
+  5 -> Binary = 00000101
+ but numpy에서는 Int32bit이다.
+ 반면 List에서는 size, Reference count,
+ object type, object value가 존재
+
+
+
+2.. Code starts
+
+ numpy의 기본은 import numpy as np후에
+a = np.array([1,3,4],float)이다.
+반면 list는 a = [1,3,4]하면 되긴함
+하지만 numpy 장점이 더 크다
+mathematics -> matlab 장점
+plotting -> matplotlib
+ml에서 tensor로써 사용가능
